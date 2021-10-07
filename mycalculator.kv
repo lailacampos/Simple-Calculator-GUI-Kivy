@@ -1,0 +1,124 @@
+<Button>
+    font_size: 32
+
+<MyLayout>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        TextInput:
+            id: calc_input
+            text: "0"
+            multiline: False
+            font_size: 65
+            size_hint: (1, 0.15)
+
+            # Aligns the text inside the text input
+            halign: "right"
+
+        GridLayout:
+            cols:4
+            rows:5
+
+            # Row 1
+
+            Button:
+                text: "%"
+
+            Button:
+                id: clear_button
+                text: "C"
+                on_press: root.clear()
+
+            Button:
+                id: clear_button
+                text: u"\u00AB"
+                on_press: root.remove()
+
+            Button:
+                text: "/"
+                on_press: root.math_sign("/")
+
+            # Row 2
+
+            Button:
+                text: "7"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.press_button(7)
+
+            Button:
+                text: "8"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.press_button(8)
+
+            Button:
+                text: "9"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.press_button(9)
+
+            Button:
+                text: "x"
+                on_press: root.math_sign("*")
+
+            # Row 3
+
+            Button:
+                text: "4"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.press_button(4)
+
+            Button:
+                text: "5"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.press_button(5)
+
+            Button:
+                text: "6"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.press_button(6)
+
+            Button:
+                text: "-"
+                on_press: root.math_sign("-")
+
+            # Row 4
+
+            Button:
+                text: "1"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.press_button(1)
+
+            Button:
+                text: "2"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.press_button(2)
+
+            Button:
+                text: "3"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.press_button(3)
+
+            Button:
+                text: "+"
+                on_press: root.math_sign("+")
+
+            # Row 5
+
+            Button:
+                text: "+/-"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.change_negative_positive()
+
+            Button:
+                text: "0"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.press_button(0)
+
+            Button:
+                text: "."
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.add_dot()
+
+            Button:
+                text: "="
+                on_press: root.equals()
