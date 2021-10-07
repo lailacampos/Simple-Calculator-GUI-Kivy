@@ -1,0 +1,7 @@
+('C:\\Users\\Laila\\.virtualenvs\\SimpleCalculator-0i6toF7k\\share\\glew\\bin',
+ None,
+ [],
+ 'DATA',
+ [('glew32.dll',
+   'C:\\Users\\Laila\\.virtualenvs\\SimpleCalculator-0i6toF7k\\share\\glew\\bin\\glew32.dll',
+   'DATA')])
